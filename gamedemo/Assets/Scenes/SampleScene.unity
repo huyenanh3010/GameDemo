@@ -741,7 +741,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2034cc5398a18ae43b8fe04bc60dfa7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShootingSim
-  bulletPrefabs: {fileID: 0}
+  bulletPrefabs: {fileID: 6121305837950292848, guid: ffe8cf7dcbeac1645ac431f7149c078e,
+    type: 3}
   shootingInterval: 0.2
   bulletOffset: {x: 0, y: 0.7, z: 0}
 --- !u!1001 &6932881618837128149
