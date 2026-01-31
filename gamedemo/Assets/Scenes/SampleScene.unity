@@ -499,7 +499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1304614568}
   - component: {fileID: 1304614567}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Short-Lazer-Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -590,7 +590,7 @@ GameObject:
   - component: {fileID: 1610609356}
   - component: {fileID: 1610609358}
   - component: {fileID: 1610609357}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Engine_01_Basic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -693,7 +693,7 @@ GameObject:
   - component: {fileID: 1799039101}
   - component: {fileID: 1799039100}
   - component: {fileID: 1799039102}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
