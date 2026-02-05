@@ -119,6 +119,26 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &291901466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1379561094550473145, guid: d872fd284ababa247a052f33a1c47136,
+    type: 3}
+  m_PrefabInstance: {fileID: 6932881618837128149}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &291901472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291901466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae02f593aa5c54247985e3bc142c40b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
+  health: {fileID: 0}
+  damage: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,6 +851,7 @@ GameObject:
   - component: {fileID: 1799039102}
   - component: {fileID: 1799039104}
   - component: {fileID: 1799039103}
+  - component: {fileID: 1799039105}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -956,6 +977,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1799039105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799039099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c203c4124d762b4dbf3ded534e95510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  explosionPrefab: {fileID: 0}
+  defaultHealthPoint: 0
 --- !u!1001 &6932881618837128149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -968,6 +1003,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379561094550473145, guid: d872fd284ababa247a052f33a1c47136,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2247177803465654784, guid: d872fd284ababa247a052f33a1c47136,
         type: 3}
@@ -1027,7 +1067,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1379561094550473145, guid: d872fd284ababa247a052f33a1c47136,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 291901472}
   m_SourcePrefab: {fileID: 100100000, guid: d872fd284ababa247a052f33a1c47136, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
