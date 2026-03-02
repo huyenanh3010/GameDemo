@@ -1,14 +1,24 @@
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PlayerShootingSim  : MonoBehaviour
+public class PlayerShootingSimple : MonoBehaviour
 {
+    [Header("Bullet Settings")]
     public GameObject bulletPrefabs;
-    public float shootingInterval;
+    public float shootingInterval = 0.3f;
     public Vector3 bulletOffset;
+
+    [Header("Sound Settings")]
+    public AudioClip shootSound;   // File âm thanh bắn
+    private AudioSource audioSource;
 
     private float lastBulletTime;
 
-    // Update is called once per frame
+    void Start()
+    {
+        // Lấy AudioSource gắn trên Player
+        audioSource = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         if (Input.GetMouseButton(0))
@@ -28,6 +38,13 @@ public class PlayerShootingSim  : MonoBehaviour
 
     private void ShootBullet()
     {
-        var bullet = Instantiate(bulletPrefabs, transform.position + bulletOffset, transform.rotation);
+        // Tạo đạn
+        Instantiate(bulletPrefabs, transform.position + bulletOffset, transform.rotation);
+
+        // Phát âm thanh bắn
+        if (shootSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(shootSound);
+        }
     }
 }

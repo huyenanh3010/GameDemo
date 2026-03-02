@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3010776751272209871}
   - component: {fileID: 1167490789129791401}
   - component: {fileID: 3376342833933566093}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df69be2a4fa66a445af43353ff770d7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
-  flySpeed: 5
+  flySpeed: 3
+  damage: 1
 --- !u!61 &1167490789129791401
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -4,6 +4,14 @@ public class Bullet : MonoBehaviour
 {
     public float flySpeed;
     public int damage;
+
+    void Update()
+    {
+        var newPosition = transform.position;
+        newPosition.y += Time.deltaTime * flySpeed;
+        transform.position = newPosition;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var enemy = collision.GetComponent<EnemyHealth>();
@@ -12,11 +20,5 @@ public class Bullet : MonoBehaviour
             enemy.TakeDamage(damage);
         }
         Destroy(gameObject);
-    }
-    void Update()
-    {
-        var newPosition = transform.position;
-        newPosition.y += Time.deltaTime * flySpeed;
-        transform.position = newPosition;
     }
 }
